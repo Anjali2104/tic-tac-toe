@@ -1,5 +1,6 @@
 import Icon from "../Icon/Icon";
-import './Card.css'
+import './Card.css';
+import {memo} from 'react';
 function Card({onPlay, player,index, gameEnd}){
   let icon= <Icon/>
   if( player == 'X'){
@@ -13,4 +14,4 @@ function Card({onPlay, player,index, gameEnd}){
         </div>
     )
 }
-export default Card;
+export default memo(Card);
